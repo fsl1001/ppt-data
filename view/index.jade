@@ -1,0 +1,58 @@
+doctype html
+html
+  head
+    title 测试
+    link(rel="stylesheet", href="/static/common/swiper.min.css", type="text/css")
+    
+  body
+    #main 
+      .main-swiper.swiper-container
+        .swiper-wrapper
+          .swiper-slide.slide-0
+            .content
+              //- canvas(id="myCanvasTag")
+              h1.center  数据可视化
+              h4.center  --冯石磊
+          .swiper-slide.slide-1
+            .sub-swiper.swiper-container
+              .swiper-wrapper
+                .swiper-slide Slide 1
+                .swiper-slide Slide 2
+                .swiper-slide Slide 3
+              // 如果需要分页器
+              .sub-swiper-pagination.swiper-pagination
+          .swiper-slide.slide-2
+            .sub-swiper.swiper-container
+              .swiper-wrapper
+                .swiper-slide Slide 1
+                .swiper-slide Slide 2
+                .swiper-slide Slide 3
+              .sub-swiper-pagination.swiper-pagination
+          .swiper-slide.slide-3
+            .sub-swiper.swiper-container
+              .swiper-wrapper
+                .swiper-slide Slide 1
+                .swiper-slide Slide 2
+                .swiper-slide Slide 3
+              .sub-swiper-pagination.swiper-pagination
+          .swiper-slide.slide-4
+            .sub-swiper.swiper-container
+              .swiper-wrapper
+                .swiper-slide Slide 1
+                .swiper-slide Slide 2
+                .swiper-slide Slide 3
+              .sub-swiper-pagination.swiper-pagination
+          .swiper-slide.slide-5
+            .sub-swiper.swiper-container
+              .swiper-wrapper
+                .swiper-slide Slide 1
+                .swiper-slide Slide 2
+                .swiper-slide Slide 3
+              .sub-swiper-pagination.swiper-pagination
+        .main-swiper-pagination.swiper-pagination
+
+    script(src="/static/common/jquery-2.1.4.min.js", type="text/javascript")
+    script(src="/static/common/swiper.min.js", type="text/javascript")
+
+    script(src="http://127.0.0.1:9091/datappt/main.js", type="text/javascript")
+

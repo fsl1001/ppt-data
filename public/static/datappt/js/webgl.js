@@ -27,9 +27,12 @@ function start() {
 
   if (gl) {
     gl.clearColor(0.0, 0.0, 0.0, 1.0);  // Clear to black, fully opaque
-    gl.clearDepth(1.0);                 // Clear everything
-    gl.enable(gl.DEPTH_TEST);           // Enable depth testing
-    gl.depthFunc(gl.LEQUAL);            // Near things obscure far things
+    gl.clearDepth(1.0);                 // Clear everything   // 设定canvas初始化时候的深度  //Specifies the depth value used when clearing the depth buffer.
+    
+    gl.enable(gl.DEPTH_TEST);           // Enable depth testing  //Activates depth comparisons and updates to the depth buffer.
+    // Near things obscure far things //specifies a function that compares incoming pixel depth to the current depth buffer value.
+    // gl.LEQUAL (pass if the incoming value is less than or equal to the depth buffer value)
+    gl.depthFunc(gl.LEQUAL);    
 
     // Initialize the shaders; this is where all the lighting for the
     // vertices and so forth is established.
@@ -57,7 +60,7 @@ function initWebGL() {
   gl = null;
 
   try {
-    gl = canvas.getContext("experimental-webgl");
+    gl = canvas.getContext('webgl') || canvas.getContext("experimental-webgl");
   }
   catch(e) {
   }
